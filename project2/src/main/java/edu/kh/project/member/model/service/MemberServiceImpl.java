@@ -38,18 +38,23 @@ public class MemberServiceImpl implements MemberService {
 		// 	  반드시 비밀번호(MEMBER_PW) 포함되어야 함
 		Member loginMember=dao.login(inputMember.getMemberEmail());
 		
-		
 		// 2. 입력받은 비밀번호(평문)
 		//    조회한 암호화된 비밀번호 비교
 		//    --> BCryptPasswordEncoder.matches(평문,암호문) 이용
 		//    	--> 같으면 true, 아니면 false
+		if(loginMember!=null) { // 아이디 정상 입력
+			
+			if(bcrypt.matches(inputMember.getMemberPw(), loginMember.getMemberPw())) {
+				// 3-1. 비밀번호가 일치하면 조회된 회원 정보 반환
+				//      단, 비밀번호는 제거
+				loginMember.setMemberPw(null);
+			} else {
+				// 3-2. 비밀번호가 일치하지 않으면 null을 반환
+				loginMember=null;
+			}
+		} 
 		
-		// 3-1. 비밀번호가 일치하면 조회된 회원 정보 반환
-		//      단, 비밀번호는 제거
-		
-		// 3-2. 비밀번호가 일치하지 않으면 null을 반환
-		
-		return null;
+		return loginMember;
 	}
 
 }
