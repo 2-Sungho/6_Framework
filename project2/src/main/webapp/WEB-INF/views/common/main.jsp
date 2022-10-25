@@ -33,9 +33,9 @@
                         <!-- 아이디,비밀번호 로그인버튼 -->
                             <fieldset id="id-pw-area">
                                 <section>
-                                    <input type="text" name="inputEmail" placeholder="이메일" autocomplete="off" value="${cookie.saveId.value}"> <!-- autocomplete:자동완성 사용X -->
+                                    <input type="text" name="memberEmail" placeholder="이메일" autocomplete="off" value="${cookie.saveId.value}"> <!-- autocomplete:자동완성 사용X -->
                                                                                                                         <%-- 쿠키 중 savdId에 저장된 값 --%>
-                                    <input type="password" name="inputPw" placeholder="비밀번호">
+                                    <input type="password" name="memberPw" placeholder="비밀번호">
                                 </section>
                                 <section>
                                     <!-- type:"submit"이 기본값 -->
