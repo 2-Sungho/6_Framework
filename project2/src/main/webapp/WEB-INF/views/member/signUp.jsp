@@ -72,7 +72,7 @@
                     <input type="text" name="memberTel" id="memberTel" placeholder="(-없이 숫자만 입력)" 
                     maxlength="11" autocomplete="off" required value="${tempMember.memberTel}">
                 </div>
-                <span class="signUp-message error">전화번호 형식이 올바르지 않습니다.</span>
+                <span class="signUp-message" id="telMessage">전화번호를 입력해주세요.(- 제외)</span>
                 
                 <%-- 주소 문자열 -> 배열로 쪼개기 --%>
                 <c:set var="addr" value="${fn:split(tempMember.memberAddress,',,')}" />
