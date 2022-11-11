@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>수업용 프로젝트</title>
+    <link rel="stylesheet" href="/resources/css/font.css">
     <link rel="stylesheet" href="/resources/css/main-style.css">
     <script src="https://kit.fontawesome.com/f7459b8054.js" crossorigin="anonymous"></script>
 </head>
@@ -22,7 +23,34 @@
 
         <section class="content">
             <section class="content-1">
-                ${loginMember}
+                <div>
+                    <h3>이메일로 회원 정보 조회(AJAX)</h3>
+                    이메일 : <input type="text" id="inputEmail">
+                    <button id="selectEmail">조회</button>
+
+                </div>
+
+                <div id="content-1-2">
+                    <h3>10초마다 모든 회원 정보 조회(AJAX)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>회원번호</th>
+                                <th>이메일</th>
+                                <th>탈퇴 여부</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>회원 수</th>
+                                <th colspan="2" id="memberCount"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </section>
             <section class="content-2">
                 <%-- 로그인 여부에 따라 출력 화면 변경 --%>
@@ -99,6 +127,8 @@
     
     <%-- footer.jsp 포함 --%>
     <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
+    <%-- jQuery CDN 방식으로 추가 --%>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="/resources/js/main.js"></script>
 </body>
 </html>
