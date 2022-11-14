@@ -29,7 +29,7 @@ public class AjaxServiceImpl implements AjaxService {
 	// 이메일로 회원정보 조회
 	@Override
 	public Member selectEmail(String email) {
-		return dao.selctEmail(email);
+		return dao.selectEmail(email);
 	}
 	
 	@Override

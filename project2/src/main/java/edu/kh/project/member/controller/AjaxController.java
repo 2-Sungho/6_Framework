@@ -75,7 +75,7 @@ public class AjaxController {
 	// 회원 목록 조회
 	@GetMapping("/selectMemberList")
 	@ResponseBody
-	public String selctMemberList() {
+	public String selectMemberList() {
 		List<Member> memberList=service.selectMemberList();
 		// 객체 1개를 표현 == JSON
 		// 객체 여러개가 담긴 배열 == JSONArray

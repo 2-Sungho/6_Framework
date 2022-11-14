@@ -35,7 +35,7 @@ public class AjaxDAO {
 	 * @param email
 	 * @return member
 	 */
-	public Member selctEmail(String email) {
+	public Member selectEmail(String email) {
 		return sqlSession.selectOne("ajaxMapper.selectEmail", email);
 	}
 
