@@ -50,4 +50,12 @@ public class BoardDAO {
 									// namespace.id				  , 파라미터	 , RowBounds객체
 									// 							    파라미터가 없을 경우 null 대입
 	}
+
+	/** 게시글 상세조회+이미지목록조회+댓글목록조회
+	 * @param boardNo
+	 * @return 
+	 */
+	public Board selectBoardDetail(int boardNo) {
+		return sqlSession.selectOne("boardMapper.selectBoardDetail", boardNo);
+	}
 }

@@ -36,9 +36,17 @@ public class BoardServiceImpl implements BoardService {
 		List<Board> boardList=dao.selectBoardList(pagination,boardCode);
 		
 		Map<String, Object> map=new HashMap<String, Object>();
-		map.put("paginaion", pagination);
+		map.put("pagination", pagination);
 		map.put("boardList", boardList);
 		
 		return map;
+	}
+
+	/**
+	 * 게시글 상세조회+이미지목록조회+댓글목록조회
+	 */
+	@Override
+	public Board selectBoardDetail(int boardNo) {
+		return dao.selectBoardDetail(boardNo);
 	}
 }
