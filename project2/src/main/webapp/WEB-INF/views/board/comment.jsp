@@ -40,8 +40,6 @@
                           
                         </div>
                     </c:if>
-                    
-                    
 
                 </li>
             </c:forEach>

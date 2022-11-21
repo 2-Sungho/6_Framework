@@ -61,10 +61,10 @@
                                                 <img class="list-thumbnail" src="${board.thumbnail}">
                                             </c:if>
 
-                                            <%-- /board/1/1500
-                                                /board/(boardCode)/(boardNo)
+                                            <%-- /board/1/1500?cp=1
+                                                /board/{boardCode}/{boardNo}?cp=${pagination.currentPage}
                                              --%>
-                                            <a href="/board/${boardCode}/${board.boardNo}">${board.boardTitle}</a>   
+                                            <a href="/board/${boardCode}/${board.boardNo}?cp=${pagination.currentPage}">${board.boardTitle}</a>   
                                             [${board.commentCount}]                       
                                         </td>
                                         <td>${board.memberNickname}</td>
@@ -150,7 +150,7 @@
                 <select name="key" id="search-key">
                     <option value="t">제목</option>
                     <option value="c">내용</option>
-                    <option value="tc">제목+내용</tion>
+                    <option value="tc">제목+내용</option>
                     <option value="w">작성자</option>
                 </select>
 
