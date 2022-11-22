@@ -74,3 +74,14 @@ boardLike.addEventListener("click",e=>{
     }
 
 })
+
+const deleteBtn=document.getElementById("deleteBtn");
+
+deleteBtn.addEventListener("click",()=>{
+    if(confirm("정말 삭제하시겠습니까?")){
+        
+        // /board/{boardCode}/{boardNo}/delete GET
+        // /board/1/1980/delete
+        location.href=location.pathname+"/delete";
+    }
+})
