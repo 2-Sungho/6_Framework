@@ -13,7 +13,7 @@ goToListBtn.addEventListener("click",()=>{
     const queryString=location.search; // ?cp=7
 
     const url=pathname.substring(0,pathname.lastIndexOf("/"))+queryString;
-    // board/1?cp=7
+    // board/1?cp=7&key=&query
 
     location.href=url;
 })

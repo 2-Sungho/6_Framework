@@ -1,6 +1,9 @@
 package edu.kh.project.common;
 
 import java.text.SimpleDateFormat;
+import java.util.List;
+
+import edu.kh.project.board.model.vo.Comment;
 
 // 유용한 기능을 모아둔 클래스
 public class Util {
@@ -33,11 +36,19 @@ public class Util {
 		return content;
 	}
 	
-	// 개행문자 처리 : \r\n, \n, \r, \n\r -> <br>
+	// 개행문자 처리 : \r\n, \n, \r, \n\r -> <br> , &nbsp; -> " " 
 	public static String newLineHandling(String content) {
 		
-		return content.replaceAll("(\r\n|\n|\r|\n\r)", "<br>");
+		return content.replaceAll("(\r\n|\n|\r|\n\r)", "<br>").replaceAll(" ", "&nbsp;");
 	}
+	
+	// 댓글 띄어쓰기 빈칸 처리 해제
+//	public static List<Comment> newLineClear(List<Comment> commentList) {
+//		for(Comment c:commentList) {
+//			c.setCommentContent(c.getCommentContent().replaceAll("&nbsp;", " "));
+//		}
+//		return commentList; 
+//	}
 	
 	// 개행문자 처리 해제
 	public static String newLineClear(String content) {
