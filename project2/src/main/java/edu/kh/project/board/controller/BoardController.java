@@ -198,7 +198,6 @@ public class BoardController {
 				long diff=b.getTime()-a.getTime();
 //				System.out.println(diff/1000); // 23:59:59 까지 남은 시간(초)
 				
-				
 				c.setMaxAge((int)(diff/1000)); // 10분
 				
 				resp.addCookie(c); 
@@ -221,7 +220,7 @@ public class BoardController {
 		return service.boardLikeUp(paramMap);
 	}
 	
-	// 좋아요 수 증가(INSERT)
+	// 좋아요 수 감소(DELETE)
 	@GetMapping("/boardLikeDown")
 	@ResponseBody
 	public int boardLikeDown(@RequestParam Map<String, Object> paramMap) {

@@ -1,0 +1,37 @@
+2022-12-02 10:41:33 [INFO] -------------------------------------------------
+[START] : BoardServiceImpl-selectBoardType()
+
+[Parameter] : [][ip]127.0.0.1
+2022-12-02 10:41:35 [INFO] Running Time : 2579ms
+2022-12-02 10:41:35 [INFO] --------------------------------------------------------
+2022-12-02 10:42:00 [INFO] -------------------------------------------------
+[START] : BoardServiceImpl-selectImageList()
+
+[Parameter] : [][스프링 스케쥴러]
+2022-12-02 10:42:00 [INFO] Running Time : 39ms
+2022-12-02 10:42:00 [INFO] --------------------------------------------------------
+2022-12-02 10:42:00 [INFO] 이미지 파일 삭제 스케쥴링 완료
+2022-12-02 10:42:01 [INFO] -------------------------------------------------
+[START] : AjaxServiceImpl-selectMemberList()
+
+[Parameter] : [][ip]127.0.0.1
+2022-12-02 10:42:01 [INFO] Running Time : 108ms
+2022-12-02 10:42:01 [INFO] --------------------------------------------------------
+2022-12-02 10:42:05 [INFO] -------------------------------------------------
+[START] : AjaxServiceImpl-selectMemberList()
+
+[Parameter] : [][ip]127.0.0.1
+2022-12-02 10:42:05 [INFO] Running Time : 6ms
+2022-12-02 10:42:05 [INFO] --------------------------------------------------------
+2022-12-02 10:42:15 [INFO] -------------------------------------------------
+[START] : AjaxServiceImpl-selectMemberList()
+
+[Parameter] : [][ip]127.0.0.1
+2022-12-02 10:42:15 [INFO] Running Time : 20ms
+2022-12-02 10:42:15 [INFO] --------------------------------------------------------
+2022-12-02 10:42:16 [INFO] -------------------------------------------------
+[START] : MemberServiceImpl-login()
+
+[Parameter] : [Member(memberNo=0, memberEmail=user02@kh.or.kr, memberPw=pass02@, memberNickname=null, memberTel=null, memberAddress=null, profileImage=null, enrollDate=null, memberDeleteFlag=null, authority=0)][ip]127.0.0.1
+2022-12-02 10:42:16 [INFO] Running Time : 139ms
+2022-12-02 10:42:16 [INFO] --------------------------------------------------------
